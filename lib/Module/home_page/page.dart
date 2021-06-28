@@ -1,7 +1,9 @@
+import 'package:FlutterDemo/Module/home_page/adapter/adapter.dart';
 import 'package:fish_redux/fish_redux.dart';
 
 import 'effect.dart';
 import 'reducer.dart';
+import 'state.dart';
 import 'state.dart';
 import 'view.dart';
 
@@ -13,7 +15,7 @@ class HomePage extends Page<HomeState, Map<String, dynamic>> {
             reducer: buildReducer(),
             view: buildView,
             dependencies: Dependencies<HomeState>(
-                adapter: null,
+                adapter: NoneConn<HomeState>() + UserAdapterAdapter(),
                 slots: <String, Dependent<HomeState>>{
                 }),
             middleware: <Middleware<HomeState>>[

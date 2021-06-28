@@ -5,14 +5,18 @@ import 'action.dart';
 import 'state.dart';
 
 Widget buildView(HomeState state, Dispatch dispatch, ViewService viewService) {
+  final ListAdapter adapter = viewService.buildAdapter();
+
   return Scaffold(
     appBar: AppBar(
       centerTitle: true,
       title: Text('home title'),
     ),
     body: Container(
-      color: Colors.red,
-      child: Text('home'),
+      child: ListView.builder(
+          itemBuilder: adapter.itemBuilder,
+          itemCount: adapter.itemCount
+      ),
     ),
   );
 }
