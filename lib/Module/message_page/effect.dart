@@ -11,6 +11,8 @@ Effect<MessageState> buildEffect() {
   });
 }
 
+
+
 void _init(Action action, Context<MessageState> ctx) {
   List<String> list = [];
   list.add('语文');

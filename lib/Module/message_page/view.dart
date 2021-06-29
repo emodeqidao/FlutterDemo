@@ -5,6 +5,23 @@ import 'state.dart';
 
 Widget buildView(
     MessageState state, Dispatch dispatch, ViewService viewService) {
+  Widget _tabBarView() {
+    return TabBarView(
+      controller: state.tabController,
+      children: state.itemList.map((item) {
+        return Container(
+          color: Colors.green,
+          child: Center(
+            child: Text(item,
+                style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white)),
+          ),
+        );
+      }).toList(),
+    );
+  }
 
   return Scaffold(
     appBar: AppBar(
@@ -34,9 +51,8 @@ Widget buildView(
         ),
       ),
     ),
-    body: Container(
-      color: Colors.red,
-      child: Text('message'),
-    ),
+    body: _tabBarView(),
   );
+
+
 }
