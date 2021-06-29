@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class MessageState implements Cloneable<MessageState> {
   TabController tabController;
-  List<Widget> itemList;
+  List<String> itemList;
 
   @override
   MessageState clone() {

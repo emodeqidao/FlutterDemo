@@ -1,5 +1,4 @@
 import 'package:fish_redux/fish_redux.dart';
-import 'package:flutter/cupertino.dart' hide Action;
 
 import 'action.dart';
 import 'state.dart';
@@ -20,7 +19,7 @@ MessageState _onAction(MessageState state, Action action) {
 
 MessageState _onInit(MessageState state, Action action) {
   final MessageState newState = state.clone();
-  List<Widget> itemList = action.payload['itemList'];
+  List<String> itemList = action.payload['itemList'];
   newState.tabController = action.payload['tabController'];
   newState.itemList = itemList;
   return newState;

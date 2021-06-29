@@ -12,16 +12,21 @@ Effect<MessageState> buildEffect() {
 }
 
 void _init(Action action, Context<MessageState> ctx) {
-  List<Widget> list = [];
-  list.add(Text('语文'));
-  list.add(Text('数学'));
-  list.add(Text('英语'));
-  list.add(Text('体育'));
-  list.add(Text('音乐'));
+  List<String> list = [];
+  list.add('语文');
+  list.add('数学');
+  list.add('英语');
+  list.add('体育');
+  list.add('音乐');
 
   final TickerProvider tickerProvider = ctx.stfState as StateWithTickerProvider;
 
   TabController tabController = TabController(length: list.length, vsync: tickerProvider);
+  //监听
+  tabController.addListener(() {
+    print('选中了：' + tabController.index.toString());
+  });
+
   Map map = {
     'itemList': list,
     'tabController': tabController
