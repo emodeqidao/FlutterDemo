@@ -1,3 +1,4 @@
+import 'package:FlutterDemo/Module/order_page/order_list_component/OrderListView.dart';
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +13,7 @@ Widget buildView(
       controller: state.tabController,
       children: state.itemList.map((item) {
         return Container(
-          child: ListView.builder(
-              itemBuilder: adapter.itemBuilder,
-              itemCount: adapter.itemCount
-          ),
+          child: OrderListView(adapter, item),
         );
       }).toList(),
     );
