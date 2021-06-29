@@ -68,3 +68,5 @@ fastlane/test_output
 *.dart_tool
 
 iOSInjectionProject/
+/.dart_tool/
+/.dart_tool/flutter_build/

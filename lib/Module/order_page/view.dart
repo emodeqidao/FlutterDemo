@@ -6,17 +6,15 @@ import 'state.dart';
 Widget buildView(
     OrderState state, Dispatch dispatch, ViewService viewService) {
   Widget _tabBarView() {
+    final ListAdapter adapter = viewService.buildAdapter();
+
     return TabBarView(
       controller: state.tabController,
       children: state.itemList.map((item) {
         return Container(
-          color: Colors.green,
-          child: Center(
-            child: Text(item,
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+          child: ListView.builder(
+              itemBuilder: adapter.itemBuilder,
+              itemCount: adapter.itemCount
           ),
         );
       }).toList(),

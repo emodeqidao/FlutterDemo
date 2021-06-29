@@ -1,3 +1,4 @@
+import 'package:FlutterDemo/Module/order_page/order_list_adapter/adapter.dart';
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/cupertino.dart' hide Page;
 
@@ -18,7 +19,7 @@ class OrderPage extends Page<OrderState, Map<String, dynamic>> {
             reducer: buildReducer(),
             view: buildView,
             dependencies: Dependencies<OrderState>(
-                adapter: null,
+                adapter: NoneConn<OrderState>() + OrderListAdapter(),
                 slots: <String, Dependent<OrderState>>{
                 }),
             middleware: <Middleware<OrderState>>[

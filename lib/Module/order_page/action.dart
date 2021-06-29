@@ -1,7 +1,7 @@
 import 'package:fish_redux/fish_redux.dart';
 
 //TODO replace with your own action
-enum OrderAction { action, onInit }
+enum OrderAction { action, onInit, selectChange }
 
 class OrderActionCreator {
   static Action onAction() {
@@ -10,5 +10,9 @@ class OrderActionCreator {
   
   static Action onInit(Map map) {
     return Action(OrderAction.onInit, payload: map);
+  }
+
+  static Action onSelectChange() {
+    return Action(OrderAction.selectChange);
   }
 }

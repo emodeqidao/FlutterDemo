@@ -29,7 +29,7 @@ MainState initState(Map<String, dynamic> args) {
     BottomNavigationBarItem(
       backgroundColor: Colors.green,
       icon: Icon(Icons.message),
-      label: "消息",
+      label: "订单",
     ),
     BottomNavigationBarItem(
       backgroundColor: Colors.amber,
