@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'state.dart';
 
 Widget buildView(
-    MessageState state, Dispatch dispatch, ViewService viewService) {
+    OrderState state, Dispatch dispatch, ViewService viewService) {
   Widget _tabBarView() {
     return TabBarView(
       controller: state.tabController,
@@ -38,7 +38,9 @@ Widget buildView(
             unselectedLabelColor: Colors.black54, //未选中的颜色
             unselectedLabelStyle:
                 TextStyle(color: Colors.black54, fontSize: 14),
-            isScrollable: false,
+            //数据量少的是 设置false 会自动撑满一行，
+            //数据量多的时候 设置true 就可以滚动
+            isScrollable: true,
             //自定义indicator样式
             indicator: BoxDecoration(
                 color: Colors.amber,

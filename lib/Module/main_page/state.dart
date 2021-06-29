@@ -1,7 +1,7 @@
 import 'package:FlutterDemo/Module/car_page/page.dart';
 import 'package:FlutterDemo/Module/home_page/page.dart';
-import 'package:FlutterDemo/Module/message_page/page.dart';
 import 'package:FlutterDemo/Module/mine_page/page.dart';
+import 'package:FlutterDemo/Module/order_page/page.dart';
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
 
@@ -45,7 +45,7 @@ MainState initState(Map<String, dynamic> args) {
 
   final List<Widget> pages = [
     HomePage().buildPage({"page": "home"}),
-    MessagePage().buildPage({"page": "message"}),
+    OrderPage().buildPage({"page": "order"}),
     CarPage().buildPage({"page": "car"}),
     MinePage().buildPage({"page": "mine"}),
   ];

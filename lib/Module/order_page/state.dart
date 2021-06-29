@@ -2,20 +2,20 @@ import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MessageState implements Cloneable<MessageState> {
+class OrderState implements Cloneable<OrderState> {
   TabController tabController;
   List<String> itemList;
 
   @override
-  MessageState clone() {
-    return MessageState()
+  OrderState clone() {
+    return OrderState()
     ..tabController = tabController
     ..itemList = itemList;
   }
 }
 
-MessageState initState(Map<String, dynamic> args) {
-  MessageState newState = MessageState();
+OrderState initState(Map<String, dynamic> args) {
+  OrderState newState = OrderState();
 
   return newState;
 }

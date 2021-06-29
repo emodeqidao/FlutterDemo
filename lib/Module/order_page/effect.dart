@@ -1,25 +1,27 @@
-import 'package:FlutterDemo/Module/message_page/page.dart';
+
+import 'package:FlutterDemo/Module/order_page/page.dart';
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart' hide Action;
 import 'action.dart';
 import 'state.dart';
 
-Effect<MessageState> buildEffect() {
-  return combineEffects(<Object, Effect<MessageState>>{
-    MessageAction.action: _onAction,
+Effect<OrderState> buildEffect() {
+  return combineEffects(<Object, Effect<OrderState>>{
+    OrderAction.action: _onAction,
     Lifecycle.initState: _init,
   });
 }
 
 
 
-void _init(Action action, Context<MessageState> ctx) {
+void _init(Action action, Context<OrderState> ctx) {
   List<String> list = [];
-  list.add('语文');
-  list.add('数学');
-  list.add('英语');
-  list.add('体育');
-  list.add('音乐');
+  list.add('全部');
+  list.add('待付款');
+  list.add('待收货');
+  list.add('待评价');
+  list.add('已完成');
+  list.add('退货/售后');
 
   final TickerProvider tickerProvider = ctx.stfState as StateWithTickerProvider;
 
@@ -33,9 +35,9 @@ void _init(Action action, Context<MessageState> ctx) {
     'itemList': list,
     'tabController': tabController
   };
-  ctx.dispatch(MessageActionCreator.onInit(map));
+  ctx.dispatch(OrderActionCreator.onInit(map));
 }
 
-void _onAction(Action action, Context<MessageState> ctx) {
+void _onAction(Action action, Context<OrderState> ctx) {
 
 }

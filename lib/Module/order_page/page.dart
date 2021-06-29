@@ -6,26 +6,26 @@ import 'reducer.dart';
 import 'state.dart';
 import 'view.dart';
 
-class MessagePage extends Page<MessageState, Map<String, dynamic>> {
+class OrderPage extends Page<OrderState, Map<String, dynamic>> {
 
   @override
   StateWithTickerProvider createState() =>StateWithTickerProvider();
 
-  MessagePage()
+  OrderPage()
       : super(
             initState: initState,
             effect: buildEffect(),
             reducer: buildReducer(),
             view: buildView,
-            dependencies: Dependencies<MessageState>(
+            dependencies: Dependencies<OrderState>(
                 adapter: null,
-                slots: <String, Dependent<MessageState>>{
+                slots: <String, Dependent<OrderState>>{
                 }),
-            middleware: <Middleware<MessageState>>[
+            middleware: <Middleware<OrderState>>[
             ],);
 
 }
 
-class StateWithTickerProvider extends ComponentState<MessageState> with TickerProviderStateMixin{
+class StateWithTickerProvider extends ComponentState<OrderState> with TickerProviderStateMixin {
 
 }
