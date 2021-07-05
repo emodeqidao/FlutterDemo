@@ -1,4 +1,4 @@
-import 'package:FlutterDemo/Module/home_page/adapter/adapter.dart';
+import 'package:FlutterDemo/Page/home_page/adapter/adapter.dart';
 import 'package:fish_redux/fish_redux.dart';
 
 import 'effect.dart';

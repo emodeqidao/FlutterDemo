@@ -1,7 +1,7 @@
-import 'package:FlutterDemo/Module/car_page/page.dart';
-import 'package:FlutterDemo/Module/home_page/page.dart';
-import 'package:FlutterDemo/Module/mine_page/page.dart';
-import 'package:FlutterDemo/Module/order_page/page.dart';
+import 'package:FlutterDemo/Page/car_page/page.dart';
+import 'package:FlutterDemo/Page/home_page/page.dart';
+import 'package:FlutterDemo/Page/mine_page/page.dart';
+import 'package:FlutterDemo/Page/order_page/page.dart';
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
 

@@ -1,4 +1,4 @@
-import 'package:FlutterDemo/Module/order_page/order_list_adapter/adapter.dart';
+import 'package:FlutterDemo/Page/order_page/order_list_adapter/adapter.dart';
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/cupertino.dart' hide Page;
 

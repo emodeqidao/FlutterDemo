@@ -1,4 +1,4 @@
-import 'package:FlutterDemo/Module/home_page/item/component.dart';
+import 'package:FlutterDemo/Page/home_page/item/component.dart';
 import 'package:fish_redux/fish_redux.dart';
 
 import '../state.dart';

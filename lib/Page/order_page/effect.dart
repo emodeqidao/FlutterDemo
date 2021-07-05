@@ -2,9 +2,9 @@
 import 'dart:math';
 
 import 'package:FlutterDemo/Model/order_list_entity.dart';
-import 'package:FlutterDemo/Module/order_page/order_list_adapter/state.dart';
-import 'package:FlutterDemo/Module/order_page/order_list_component/state.dart';
-import 'package:FlutterDemo/Module/order_page/page.dart';
+import 'package:FlutterDemo/Page/order_page/order_list_adapter/state.dart';
+import 'package:FlutterDemo/Page/order_page/order_list_component/state.dart';
+import 'package:FlutterDemo/Page/order_page/page.dart';
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart' hide Action;
 import 'action.dart';

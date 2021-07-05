@@ -1,5 +1,5 @@
 import 'package:FlutterDemo/Model/user_model_entity.dart';
-import 'package:FlutterDemo/Module/home_page/item/state.dart';
+import 'package:FlutterDemo/Page/home_page/item/state.dart';
 import 'package:fish_redux/fish_redux.dart';
 
 import 'action.dart';

@@ -1,4 +1,3 @@
-import 'package:FlutterDemo/Module/main_page/page.dart';
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
 

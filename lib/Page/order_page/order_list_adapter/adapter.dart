@@ -1,5 +1,5 @@
-import 'package:FlutterDemo/Module/order_page/order_list_component/component.dart';
-import 'package:FlutterDemo/Module/order_page/state.dart';
+import 'package:FlutterDemo/Page/order_page/order_list_component/component.dart';
+import 'package:FlutterDemo/Page/order_page/state.dart';
 import 'package:fish_redux/fish_redux.dart';
 
 import 'reducer.dart';
