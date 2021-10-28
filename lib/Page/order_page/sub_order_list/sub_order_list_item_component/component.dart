@@ -4,14 +4,14 @@ import 'reducer.dart';
 import 'state.dart';
 import 'view.dart';
 
-class OrderListComponent extends Component<OrderListComponentState> {
-  OrderListComponent()
+class SOrderListItemComponent extends Component<SOrderListItemState> {
+  SOrderListItemComponent()
       : super(
             reducer: buildReducer(),
             view: buildView,
-            dependencies: Dependencies<OrderListComponentState>(
+            dependencies: Dependencies<SOrderListItemState>(
                 adapter: null,
-                slots: <String, Dependent<OrderListComponentState>>{
+                slots: <String, Dependent<SOrderListItemState>>{
                 }),);
 
 }

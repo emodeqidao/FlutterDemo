@@ -1,4 +1,4 @@
-import 'package:FlutterDemo/Page/order_page/order_list_component/OrderListView.dart';
+import 'package:FlutterDemo/myRoutes.dart';
 import 'package:fish_redux/fish_redux.dart';
 import 'package:flutter/material.dart';
 
@@ -7,22 +7,16 @@ import 'state.dart';
 Widget buildView(
     OrderState state, Dispatch dispatch, ViewService viewService) {
   Widget _tabBarView() {
-    final ListAdapter adapter = viewService.buildAdapter();
-
-    return TabBarView(
-      controller: state.tabController,
-      children: state.itemList.map((item) {
-        return Container(
-          child: OrderListView(adapter, item),
-        );
-      }).toList(),
-    );
+   return TabBarView(
+     controller: state.tabController,
+     children: state.subOrderPageList,
+   );
   }
 
   return Scaffold(
     appBar: AppBar(
       centerTitle: true,
-      title: Text('message title'),
+      title: Text('order title'),
       bottom: PreferredSize(
         preferredSize: Size.fromHeight(48),
         child: Container(

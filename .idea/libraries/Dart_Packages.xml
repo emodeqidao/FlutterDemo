@@ -229,7 +229,7 @@
         <entry key="flutter">
           <value>
             <list>
-              <option value="$USER_HOME$/fvm/versions/1.22.6/packages/flutter/lib" />
+              <option value="$USER_HOME$/fvm/versions/1.22.5/packages/flutter/lib" />
             </list>
           </value>
         </entry>
@@ -243,7 +243,7 @@
         <entry key="flutter_test">
           <value>
             <list>
-              <option value="$USER_HOME$/fvm/versions/1.22.6/packages/flutter_test/lib" />
+              <option value="$USER_HOME$/fvm/versions/1.22.5/packages/flutter_test/lib" />
             </list>
           </value>
         </entry>
@@ -509,7 +509,7 @@
         <entry key="sky_engine">
           <value>
             <list>
-              <option value="$USER_HOME$/fvm/versions/1.22.6/bin/cache/pkg/sky_engine/lib" />
+              <option value="$USER_HOME$/fvm/versions/1.22.5/bin/cache/pkg/sky_engine/lib" />
             </list>
           </value>
         </entry>
@@ -786,9 +786,9 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/webkit_inspection_protocol-0.7.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/xml-4.5.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.flutter-io.cn/yaml-2.2.1/lib" />
-      <root url="file://$USER_HOME$/fvm/versions/1.22.6/bin/cache/pkg/sky_engine/lib" />
-      <root url="file://$USER_HOME$/fvm/versions/1.22.6/packages/flutter/lib" />
-      <root url="file://$USER_HOME$/fvm/versions/1.22.6/packages/flutter_test/lib" />
+      <root url="file://$USER_HOME$/fvm/versions/1.22.5/bin/cache/pkg/sky_engine/lib" />
+      <root url="file://$USER_HOME$/fvm/versions/1.22.5/packages/flutter/lib" />
+      <root url="file://$USER_HOME$/fvm/versions/1.22.5/packages/flutter_test/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

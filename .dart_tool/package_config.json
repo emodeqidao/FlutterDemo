@@ -57,13 +57,13 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///Users/xixi/fvm/versions/1.22.6/packages/flutter",
+      "rootUri": "file:///Users/xixi/fvm/versions/1.22.5/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "2.10"
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///Users/xixi/fvm/versions/1.22.6/packages/flutter_test",
+      "rootUri": "file:///Users/xixi/fvm/versions/1.22.5/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "2.2"
     },
@@ -93,7 +93,7 @@
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///Users/xixi/fvm/versions/1.22.6/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///Users/xixi/fvm/versions/1.22.5/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "1.11"
     },
@@ -152,7 +152,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-09-15T00:05:01.655025Z",
+  "generated": "2021-10-27T08:41:51.376Z",
   "generator": "pub",
-  "generatorVersion": "2.10.5"
+  "generatorVersion": "2.10.4"
 }

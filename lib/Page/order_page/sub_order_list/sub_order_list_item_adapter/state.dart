@@ -1,9 +1,9 @@
 import 'package:fish_redux/fish_redux.dart';
 
-class OrderListAdapterState extends MutableSource implements Cloneable<OrderListAdapterState> {
+class SOrderListItemAdapterState extends MutableSource implements Cloneable<SOrderListItemAdapterState> {
   @override
-  OrderListAdapterState clone() {
-    return OrderListAdapterState();
+  SOrderListItemAdapterState clone() {
+    return SOrderListItemAdapterState();
   }
 
   @override
@@ -28,6 +28,6 @@ class OrderListAdapterState extends MutableSource implements Cloneable<OrderList
   }
 }
 
-OrderListAdapterState initState(Map<String, dynamic> args) {
-  return OrderListAdapterState();
+SOrderListItemAdapterState initState(Map<String, dynamic> args) {
+  return SOrderListItemAdapterState();
 }

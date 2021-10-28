@@ -23,15 +23,13 @@ OrderState _onInit(OrderState state, Action action) {
   List<String> itemList = action.payload['itemList'];
   newState.tabController = action.payload['tabController'];
   newState.itemList = itemList;
-  List allData = action.payload['dataSourceList'];
-  newState.allDataSourceList = allData;
-  newState.currentListData = allData[newState.tabController.index];
+  newState.subOrderPageList = action.payload['widgetList'];
   return newState;
 }
 
 OrderState _onSelectChange(OrderState state, Action action) {
   final OrderState newState = state.clone();
-  newState.currentListData = state.allDataSourceList[state.tabController.index];
+  int selectIndex = action.payload;
 
   return newState;
 }

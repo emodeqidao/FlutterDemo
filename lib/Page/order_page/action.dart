@@ -12,7 +12,7 @@ class OrderActionCreator {
     return Action(OrderAction.onInit, payload: map);
   }
 
-  static Action onSelectChange() {
-    return Action(OrderAction.selectChange);
+  static Action onSelectChange(int index) {
+    return Action(OrderAction.selectChange, payload: index);
   }
 }

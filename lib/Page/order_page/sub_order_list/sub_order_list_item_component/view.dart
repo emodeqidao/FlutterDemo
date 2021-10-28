@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'action.dart';
 import 'state.dart';
 
-Widget buildView(OrderListComponentState state, Dispatch dispatch, ViewService viewService) {
+Widget buildView(SOrderListItemState state, Dispatch dispatch, ViewService viewService) {
   return Container(
     height: 80,
     padding: EdgeInsets.all(10),
@@ -22,4 +22,5 @@ Widget buildView(OrderListComponentState state, Dispatch dispatch, ViewService v
       ],
     ),
   );
+
 }
