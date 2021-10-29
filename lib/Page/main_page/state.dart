@@ -13,13 +13,14 @@ class MainState implements Cloneable<MainState> {
   @override
   MainState clone() {
     return MainState()
-    ..bottomNavItems = bottomNavItems
-    ..currentIndex = currentIndex
-    ..pages = pages;
+      ..bottomNavItems = bottomNavItems
+      ..currentIndex = currentIndex
+      ..pages = pages;
   }
 }
 
 MainState initState(Map<String, dynamic> args) {
+  print('main init state');
   final List<BottomNavigationBarItem> bottomNavItems = [
     BottomNavigationBarItem(
       backgroundColor: Colors.blue,
@@ -43,16 +44,22 @@ MainState initState(Map<String, dynamic> args) {
     ),
   ];
 
+  Widget homeWidget = HomePage().buildPage({"page": "home"});
+  Widget OrderWidget = OrderPage().buildPage({"page": "order"});
+  Widget carWidget = CarPage().buildPage({"page": "car"});
+  Widget mineWidget = MinePage().buildPage({"page": "mine"});
+
   final List<Widget> pages = [
-    HomePage().buildPage({"page": "home"}),
-    OrderPage().buildPage({"page": "order"}),
-    CarPage().buildPage({"page": "car"}),
-    MinePage().buildPage({"page": "mine"}),
+    keepAliveClientWrapper(homeWidget),
+    keepAliveClientWrapper(OrderWidget),
+    keepAliveClientWrapper(carWidget),
+    keepAliveClientWrapper(mineWidget)
   ];
 
-  MainState state = MainState();
-  state.bottomNavItems = bottomNavItems;
-  state.currentIndex = 0;
-  state.pages = pages;
+  MainState state = MainState()
+  ..currentIndex = 0
+  ..bottomNavItems = bottomNavItems
+  ..pages = pages;
+
   return state;
 }

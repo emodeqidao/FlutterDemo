@@ -35,5 +35,6 @@ class HomeState extends MutableSource implements Cloneable<HomeState> {
 }
 
 HomeState initState(Map<String, dynamic> args) {
+  print('home init state');
   return HomeState();
 }

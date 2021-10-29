@@ -9,5 +9,6 @@ class CarState implements Cloneable<CarState> {
 }
 
 CarState initState(Map<String, dynamic> args) {
+  print('car init state');
   return CarState();
 }

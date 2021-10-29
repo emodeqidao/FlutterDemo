@@ -1,7 +1,7 @@
 import 'package:fish_redux/fish_redux.dart';
 
 //TODO replace with your own action
-enum HomePageAction { action, change }
+enum HomePageAction { action, change, init }
 
 class HomePageActionCreator {
   static Action onAction() {
@@ -10,5 +10,9 @@ class HomePageActionCreator {
 
   static Action change(int index) {
     return Action(HomePageAction.change, payload: index);
+  }
+
+  static Action init(Map map) {
+    return Action(HomePageAction.init, payload: map);
   }
 }

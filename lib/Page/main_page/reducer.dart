@@ -8,8 +8,17 @@ Reducer<MainState> buildReducer() {
     <Object, Reducer<MainState>>{
       HomePageAction.action: _onAction,
       HomePageAction.change: _onChangePage,
+      Lifecycle.initState: _init,
     },
   );
+}
+
+MainState _init(MainState state, Action action) {
+  final MainState newState = state.clone();
+  Map map = action.payload;
+  newState.bottomNavItems = map['bottomNavItems'];
+  newState.pages = map['pages'];
+  return newState;
 }
 
 MainState _onAction(MainState state, Action action) {

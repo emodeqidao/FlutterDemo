@@ -9,5 +9,6 @@ class MineState implements Cloneable<MineState> {
 }
 
 MineState initState(Map<String, dynamic> args) {
+  print('mine init state');
   return MineState();
 }

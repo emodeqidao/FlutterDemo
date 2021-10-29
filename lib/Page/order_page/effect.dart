@@ -21,17 +21,12 @@ Effect<OrderState> buildEffect() {
 
 
 Future<void> _init(Action action, Context<OrderState> ctx) {
-  List<String> list = [];
-  list.add('全部');
-  list.add('待付款');
-  list.add('待收货');
-  list.add('待评价');
-  list.add('已完成');
-  list.add('退货/售后');
+  print('order effect init');
+
 
   final TickerProvider tickerProvider = ctx.stfState as StateWithTickerProvider;
 
-  TabController tabController = TabController(length: list.length, vsync: tickerProvider, initialIndex: 0);
+  TabController tabController = TabController(length: ctx.state.itemList.length, vsync: tickerProvider, initialIndex: 0);
   //监听
   tabController.addListener(() {
     print('pre' + tabController.previousIndex.toString());
@@ -40,22 +35,15 @@ Future<void> _init(Action action, Context<OrderState> ctx) {
     // }
   });
 
-  List<Widget> widgetList = <Widget>[];
-
-  list.forEach((element) {
-    String valueStr = 'value ${element}';
-    print('${valueStr}');
-    Widget contentWidget = myRoutes.routes.buildPage('subOrderListPage', {'key': valueStr});
-    widgetList.add(contentWidget);
-  });
+  ctx.state.tabController = tabController;
 
   Map map = {
-    'itemList': list,
-    'tabController': tabController,
-    'widgetList': widgetList,
+    // 'itemList': list,
+    // 'tabController': tabController,
+    // 'widgetList': widgetList,
   };
 
-  ctx.dispatch(OrderActionCreator.onInit(map));
+  // ctx.dispatch(OrderActionCreator.onInit(map));
 }
 
 void _onAction(Action action, Context<OrderState> ctx) {

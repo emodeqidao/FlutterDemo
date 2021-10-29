@@ -14,6 +14,8 @@ Effect<HomeState> buildEffect() {
 }
 
 void _init(Action action, Context<HomeState> ctx) {
+  print('home effect init');
+
   List<UserModelEntity> list = [];
   for (int i = 0; i < 20; i++) {
      UserModelEntity entity = UserModelEntity();
