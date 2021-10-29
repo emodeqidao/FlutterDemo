@@ -30,6 +30,7 @@ MainState _onChangePage(MainState state, Action action) {
   final MainState newState = state.clone();
   int clickIndex = action.payload;
   if (clickIndex != state.currentIndex) {
+    newState.pageController.jumpToPage(clickIndex);
     newState.currentIndex = clickIndex;
   }
   return newState;

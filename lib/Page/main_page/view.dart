@@ -20,7 +20,16 @@ Widget buildView(MainState state, Dispatch dispatch, ViewService viewService) {
           dispatch(HomePageActionCreator.change(v));
         },
       ),
-      body: state.pages != null ? state.pages[state.currentIndex] : Container(),
+      body: PageView.builder(
+        onPageChanged: (v) {
+          // print('改变到了${v}');
+        },
+        controller: state.pageController,
+        itemBuilder: (BuildContext context, int index) {
+          return state.pages[index];
+        },
+        physics: NeverScrollableScrollPhysics(),
+      ),
     ),
   ));
 }

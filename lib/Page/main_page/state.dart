@@ -9,13 +9,15 @@ class MainState implements Cloneable<MainState> {
   List<BottomNavigationBarItem> bottomNavItems;
   List<Widget> pages;
   int currentIndex;
+  PageController pageController;
 
   @override
   MainState clone() {
     return MainState()
       ..bottomNavItems = bottomNavItems
       ..currentIndex = currentIndex
-      ..pages = pages;
+      ..pages = pages
+      ..pageController = pageController;
   }
 }
 
@@ -44,22 +46,18 @@ MainState initState(Map<String, dynamic> args) {
     ),
   ];
 
-  Widget homeWidget = HomePage().buildPage({"page": "home"});
-  Widget OrderWidget = OrderPage().buildPage({"page": "order"});
-  Widget carWidget = CarPage().buildPage({"page": "car"});
-  Widget mineWidget = MinePage().buildPage({"page": "mine"});
-
   final List<Widget> pages = [
-    keepAliveClientWrapper(homeWidget),
-    keepAliveClientWrapper(OrderWidget),
-    keepAliveClientWrapper(carWidget),
-    keepAliveClientWrapper(mineWidget)
+    keepAliveClientWrapper(HomePage().buildPage({"page": "home"})),
+    keepAliveClientWrapper(OrderPage().buildPage({"page": "order"})),
+    keepAliveClientWrapper(CarPage().buildPage({"page": "car"})),
+    MinePage().buildPage({"page": "mine"})
   ];
 
   MainState state = MainState()
   ..currentIndex = 0
   ..bottomNavItems = bottomNavItems
-  ..pages = pages;
+  ..pages = pages
+  ..pageController = PageController();
 
   return state;
 }
